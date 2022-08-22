@@ -1,0 +1,531 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Doc Modules                                                      #
+# Copyright (c) 2018-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+import gh.toepproj.lit.H.ilbert.ZB.Thm119 as Thm119
+
+anno tutorial @@@
+
+# Intro to PISE
+
+<ctl:w58>[]{
+  section_numbers: {
+    top_level: 2,
+  }
+}
+
+Author: Steve Kieffer
+
+This is an introductory tutorial on PISE, the Proofscape Integrated
+Study Environment.
+
+We use Theorem 119 of Hilbert's _Zahlbericht_ as an example, giving us
+something to look at, but the tutorial is all about introducing the features
+of PISE, and showing you how to use them. You don't need to be interested in
+algebraic number theory.
+
+You can control the text size using the zoom setting under the Config menu.
+There you'll also find a light mode / dark mode setting.
+
+
+## Opening the Theorem
+
+Let's begin by examining <chart:w23>[the theorem]{view: Thm119.Thm}.
+(Please click the words "the theorem" if you haven't already!)
+You should now see a representation of Theorem 119 in a new panel
+beside these notes. We'll call that the "chart" or "diagram" panel.
+If you're using a large display, you might want to grab the vertical
+bar that separates the chart from
+these notes and drag it this way, to give the chart more space.
+
+If you right-click anywhere in the grey background of the "Theorem 119" box
+in the diagram, you will see an option for "Running defs".
+Select this, and you will see the running definitions
+for $@ell$, $@zeta$, and $k$ that are in effect for this theorem:
+$@ell$ is the odd prime whose cyclotomic field $@k = bbQ(zeta)$ we
+are examining. Hit `Esc` or click in the background of the chart to
+take this menu away.
+
+As the diagram shows, we are
+<chart:w37>[considering]{view: Thm119.Thm.I1} (please keep clicking the links
+as you read!) a rational prime $p$ different from $@ell$, and we
+want to establish
+<chart:w38>[the way this prime factors]{view: Thm119.Thm.A}
+in the field $k$. Please take
+a moment and review the full theorem statement as presented in the diagram.
+
+
+## How does this work?
+
+The bits of text you've been clicking are called "widgets,"
+and if you right-click
+any widget and select "View Source" you'll see the source code that generated the
+notes you are now reading.
+
+Similarly, right-clicking any node in the chart panel will reveal a "View Source"
+option that will show you how the chart is coded.
+
+The application you're using right now is called the Proofscape ISE (which stands
+for _Integrated Study Environment_), and it is both a place to develop and build
+these _source modules_, as well as to study the _annotations_ and _charts_ they
+produce, as you are now doing.
+If you were working on modules you owned, then instead of "View Source," you would
+see "Edit Source."
+
+You can learn to code Proofscape modules from the docs. For now, close any source
+modules you may have opened, and we'll get back to studying Theorem 119.
+
+
+## Opening the Proof
+
+Now we can open the proof. You can always do this by finding
+<chart:w24>[a node that needs proof]{view: Thm119.Thm.A} -- in this case the node
+that makes the assertion of the theorem -- then _right-click_ this node, and look
+for an _Expansion_. You can try it yourself now, or I can
+<chart:w25>[open the proof]{view: Thm119.Pf} for you.
+
+After the proof opens, you may find that the text on the nodes has become too small to read.
+If you have a multitouch trackpad, you can pan with scrolling gestures in both
+dimensions, and zoom with the pinch gesture. If you are
+using a mouse, you can pan by clicking and dragging, and zoom by holding
+`Ctrl` while using the mouse wheel.
+
+Now we need to get our bearings. If you were watching closely during the animation
+in which the proof opened, you may have observed that the theorem was
+_expanded_ to make room for the proof. The premises of the theorem went to one
+side of the diagram, and the conclusion to the opposite side.
+
+Let's locate the nodes of the theorem now.
+The premises are <chart:w26>[here]{view: "Thm119.Thm.{I1,I2,I3}"}, and the
+conclusion is <chart:w27>[here]{view: Thm119.Thm.A}.
+If you clicked the last two widgets you should have seen the diagram pan
+and zoom to display the nodes I'm talking about.
+
+## The Overview Panel
+
+Now that we are zoomed in closer, the text is legible, but you may feel that you
+are getting lost. Click the "Chart" menu at the top-right of the ISE,
+find "Inset", and then select the bottom-left corner for the inset panel to appear.
+
+You should now see the inset panel in the lower-left corner of the chart area.
+(At the moment it may not look like much more than a blank square.)
+If you move your mouse pointer over the inset panel, you should see two tabs:
+"Neighborhood" and "Overview". Select "Overview." This should help.
+
+Now try panning around the main diagram with your mouse or trackpad as before,
+and observe that there is a moving blue box inside the overview panel.
+This represents your view. You can also click and drag this
+blue box in order to pan. Try using this to pan between the premises and
+conclusion of the theorem. (If you're having trouble finding them, you can always
+use the last two widgets in the previous section.)
+
+### Text Overview
+
+These notes are somewhat long themselves, and could benefit from their own
+overview. Right-click anywhere in these notes (except directly on a widget)
+and select the "Toggle Overview" option. If you decide you don't want this,
+you can toggle it again. If you do decide to use the overview, try right-clicking
+within it, for a zoom control.
+
+
+## Outward Structure the Proof
+
+Before we even get into the mathematics of the proof,
+let's return to <chart:w39>[the bird's eye view]{view: "Thm119.{Thm,Pf}"}.
+(By the way, you can always double-click anywhere on the _background_ of the
+chart area to make all nodes visible.)
+
+From here we can spy what _may_ turn out to be meaningful structures within the
+proof. (At this point, these are just guesses.)
+
+On one side of the diagram there appears to be <chart:w40>[a small cluster]{color: {
+  ":olB:bgB": "Thm119.Pf.{A190,Thm31,A180,Thm118}"
+}} of nodes.
+
+Looking more closely, we might observe that certain nodes form
+<chart:w41>[a kind of loop]{color: {
+  ":olB:bgB:eoB": "Thm119.Pf.{I80,R90,A100,A110,A120,A140,A150,A160}"
+}}, into which <chart:w42>[these nodes]{color: {
+  ":olB:bgB:eoB": "Thm119.Pf.{I60,Thm24,A95,Thm26,A70,A50,A40,I30,S20,I10,S130}"
+}} seem to feed.
+
+Selecting <chart:w43>[the three premises]{
+  color: {":olB:bgB:eoBG": "Thm119.Thm.{I1,I2,I3}"}
+} and tracing their outgoing connections, we see where they feed into the picture.
+(You can also try clicking on them one at a time, to highlight them individually.)
+Selecting <chart:w46>[the conclusion]{color: {
+  ":olB:bgB:eiVB": Thm119.Thm.A,
+}}, we see that it drops out of <chart:w1>[another small cluster]{color: {
+  ":olB:bgB": "Thm119.Pf.{A240,A230,A220,A170,I200,A210}"
+}}, which itself draws together the "loop" and the first small cluster we identified
+earlier.
+
+
+## What to Expect
+
+In a few moments we're going to start examining the actual argument of the proof,
+and we should talk about what to expect.
+
+A common misconception when getting started with
+Proofscape is to imagine that, because we now have a diagram in front of us,
+understanding the proof is somehow going to be instantaneous and effortless.
+This is mistaken.
+
+The diagram helps us construct a mental picture
+of how the steps of the proof fit together, but we should expect to spend as much
+time thinking about each step as we would if reading through the proof in prose
+form.
+
+Let's now begin to study the proof. As we go, the advantages of the
+diagrammatic representation should make themselves clear.
+
+
+## Refresher
+
+It's been a while, so we might want to refresh ourselves on what we're
+here to prove. Let's therefore close the proof and review the theorem statement.
+To do that, you can either
+<chart:w47>[click here]{off_board: Thm119.Pf, view: Thm119.Thm},
+or else close the proof yourself by right-clicking
+anywhere in its grey background, and selecting "Close" from the context menu.
+
+If you tried it yourself and you accidentally closed not just the proof but the
+theorem too (and are now staring at a blank chart area), the "click here" widget
+from the last paragraph will get you back where you need to be.
+
+I leave you to re-read the theorem statement.
+Remember that you can access the running definitions from the theorem's
+context menu (right-click).
+When you are ready, let's return to
+<chart:w48>[the proof]{view: "Thm119.{Thm,Pf}", layout: "KLayDown"}.
+
+
+## Plan of the Discussion
+
+As is so often the case, we can conduct a motivated walk through the argument
+by working "backwards" from the conclusion. But this is only really "backwards" if we
+regard the conclusion as coming at the "end" of the argument.
+One of the beauties of an argument map is that it sets us free from such linear
+ordering.
+In order to promote a different
+point of view, we might want to <chart:w50>[flip the diagram]{layout: "KLayUp"}.
+Now we can start with
+<chart:w51>[the concluding step]{
+  view: ["Thm119.Thm.A", "Thm119.Pf.{A170,A240,Thm118}"],
+  select: Thm119.Thm.A,
+},
+and work our way down.
+
+Of course this isn't necessary, it just promotes a different way of looking at
+things. If you preferred the old layout, you can go to the "Chart" menu, and use
+the "Layout" option to go back to "FlowChart Down." It's up to you. In fact,
+some may even prefer the "OrderedList" layout you find there. It's your choice.
+
+
+## Delving into the Proof
+
+Okay, it's finally time to get down to the business of examining the argument,
+but I will continue to teach you how to use the software as we go.
+
+So... We want to show that $p$ factors in $@k = bbQ(zeta)$ like
+<chart:w52>[this]{view: Thm119.Thm.A, color:{":bgY":Thm119.Thm.A}, select: null}.
+This includes the fact that...
+
+* the prime ideals $@frpi$ dividing $p$ are distinct,
+* there are $e$ of them, and
+* each is of degree $f$.
+
+Let's begin with the fact that the $@frpi$ are all distinct, i.e. that $p$ is
+squarefree, or unramified in $k$.
+If we had been studying the _Zahlbericht_ text up to this point, it would be
+fresh in our minds that a prime is unramified in a number
+field just in case it does not divide the discriminant of the field. And so
+it would be reasonable to begin this proof by bringing these facts to bear,
+and this is what happens right <chart:w53>[here]{color: {
+  ":bgY":"Thm119.Pf.{Thm118,A180,A190,Thm31}"
+}, view: "Thm119.Pf.{Thm118,A180,A190,Thm31}"}.
+
+If you hover your mouse pointer over the nodes for Theorems 31 and 118, you
+will see pop-ups showing the theorem statements. The theorems can also be
+opened by double-clicking, but it's best if we save that for later. (If you
+do open them, remember that you can close them using their right-click
+context menu.)
+
+Now click on the node that says, "$p$ does not divide the discriminant of $k$."
+We can see that this node is connected to three others, but one of its
+connectors runs off screen. We can of course pan the view in order to find
+the off-screen neighbor, but there is another way.
+
+
+## Neighborhoods
+
+Under the "Chart" menu, find "Selection Style," and choose "Node, Edges, Nbrs."
+Now once again put your mouse pointer over the overview panel (the thing we opened
+in the lower left corner of the screen), so that you see
+the two tabs. This time, select the "Neighborhood" tab. You should now see some
+colored boxes inside the neighborhood view. (If you don't see them, don't worry,
+it just means you need to click
+again on the node that says, "$p$ does not divide the discriminant of $k$.")
+
+The boxes in the neighborhood view represent the selected node and its neighbors.
+The selected node is in the center, and colored blue. Its _logical antecedents_ (nodes
+it follows from) are on one side of it and colored purple, and its _logical consequents_
+(nodes that follow from it) are on the opposite side and colored green.
+
+Nodes that are (partly or completely) off-screen are dimly colored in
+the neighborhood view,
+while nodes that are fully on-screen are more brightly colored. If you hover
+over the dimly colored box now, you should see a pop-up showing you the
+off-screen neighbor of our selected node.
+The text size matches that in the main chart area, so if it is too small,
+just zoom in (pinch gesture, or Ctrl-mousewheel) in the main area and try again.
+
+From the pop-up we can see that we are using the premise that $p$ is a prime
+distinct from $@ell$. This combines with Theorem 118 to tell us that $p$
+does not divide the discriminant of $k$ (hover over Theorem 118 again if you
+forgot what it states), which combines with Theorem 31 to
+tell us that $p$ factors in $k$ as a product of distinct primes. In other
+words, we know that the $@frpi$ are all distinct, and we have completed
+one of our three sub-goals in the proof of this theorem.
+
+
+## Overview again
+
+Let's once again switch back from the neighborhood view to the overview,
+by clicking the appropriate tab on the inset panel.
+Although it may be hard to see, the boxes here are also colored, according
+to your selection in the chart. And here too, if you hover over any off-screen
+box, you'll see a pop-up showing the contents of that node. The boxes may be
+very small on your screen, but you can do it.
+
+
+## Simultaneous Views
+
+This section covers some advanced use of the visualization capabilities of PISE.
+
+### Controlling the Inset Panel
+
+If you right-click the inset panel, you'll see a context menu. You see that you
+can move the panel to any of the four corners, or even close it altogether.
+(All this can also be done from the Chart menu.)
+
+If you uncheck the "AutoView" option, then you can pan and zoom within the
+inset panel itself. Check "AutoView" again to make the view automatically
+track what's visible in the main diagram area.
+
+
+### A "Mid-sized" Overview
+
+If the overview panel seems a bit too small, there is always another way to have
+simultaneous views of the diagram.
+
+At the top of the diagram panel, you should see a tab, with a "navigation" or
+"ship's wheel" icon. Right-click the tab, and look for "Open in Opposite Group."
+If you click that, you're going to cover up these notes, and I'll ask you to please
+come back after you've finished looking around.
+
+While you're there, you may notice
+that the highlight colors in the two views are linked (try clicking a few different
+nodes in each tab). By zooming out in one view, you can have a kind
+of "mid-sized overview panel."
+
+### Ordered Layout
+
+Another thing you might try while you have two chart tabs open is to change
+the layout in the new tab (again, that's Chart Menu `->` Layout) to "OrderedList"
+layout. Note that the "Chart" menu always controls the _active_ chart tab, i.e.
+the last one you clicked or interacted with in any way.
+
+OrderedList layout presents the nodes in linear order, as they might appear in a
+prose proof. Since, again, highlight colors in the two tabs are linked, this can provide
+a nice counterpoint, and can help guide you through the flow chart in a sensible order.
+
+### Multiple Windows
+
+Between these notes, and now two chart views (and maybe even some source modules?)
+the ISE may be starting to feel a bit crowded, even though you can open as many
+splits (vertical or horizontal) as you wish (see the context menus on the tabs at the
+top of the panels).
+
+Luckily, if you have multiple computer monitors, you can actually
+use all of that space. Again right-clicking the tab for one of the chart views,
+you should see a grayed-out option to "Move to window...". If you load the Proofscape
+ISE in a second browser window -- i.e. another completely separate window of your web
+browser -- this option will become enabled, and you can move a tab over to the other
+window. If you put the second window on your second monitor, you can really take advantage
+of all that screen space.
+
+If you try this, you'll find that the two chart
+tabs will still be linked, and share highlight colors. Moreover, the chart panel
+that is controlled by the widgets in these notes will continue to be controlled
+by them, even if you move it to the other window.
+
+
+
+## Keeping Track of Progress
+
+PISE is part project planner. Tackling a big proof can be, after all, a big
+project. You could spend a week understanding just one section. Then another week
+on another section. Then, after all that time, you'll need to zoom back out and
+remember how those separate sections fit into the big picture.
+
+Moreover, as you work your way through a proof, you need a way to keep track of
+your progress. Which parts have you understood so far? Were there difficulties
+you wanted to return to later? Where should you go next?
+For all this, PISE provides Goal Boxes, and Study Pages.
+
+
+### Goal Boxes
+
+Now is a good time to start using goal boxes. You should see a small box
+in the upper-right corner of each node in the diagram. (If not, go to the
+Study menu and make sure the "Show Goal Boxes" option is checked.)
+
+By clicking these boxes, you can toggle checkmarks on and off, and this is
+a good way to keep track of which nodes you have already examined and understood
+in the proof. Go ahead and check the boxes for
+<chart:w55>[these two nodes]{view: "Thm119.Pf.{A180,A190}"} now.
+This represents our progress so far, in understanding this proof.
+
+Under default settings, the state of these checkboxes will be stored in your
+browser at least until you
+close the browser tab where you are currently working. If you want them to be
+more permanent, you can try activating the different options under the
+Study menu, to "Record Notes in Browser" or (if it is enabled) "Record Notes on
+Server". When you select these options, dialog boxes will come up to give you
+more information about how they work. You can also use the Study menu to export
+your checkmarks in JSON format, and then import them again later.
+
+Note: If you're running PISE on your own computer, using the PISE Docker image,
+then the option to record notes on the server is always selected.
+In this case, the server is running on your own machine, so recording your notes
+this way just means saving them on your computer's hard drive. If, on the contrary,
+you are reading this tutorial on an online server, it may or may not be configured
+to offer you the option to record your notes there. If it does offer the option,
+you have to log in first, and then opt in by checking the box in the Study menu.
+
+
+### Jotting Down Notes
+
+Goal boxes also give you a way to jot down notes. Find the goal box for the
+<chart:w56>[conclusion node]{view: Thm119.Thm.A, color:{":bgY":Thm119.Thm.A}}, and
+right-click _the goal box (not the node)_.
+You should see a context menu.
+If you select the "Notes" option on this menu,
+you'll see a dialog box, where you can record any notes you
+wish, in Markdown syntax.
+You write your notes under the "Edit" tab.
+For example, you might write something like this:
+
+```
+Have three things to show:
+
+* the prime ideals $\mathfrak{p}_i$ are all distinct
+* there are $e$ of them
+* each has degree $f$
+```
+
+Go ahead and try that now.
+Then you can click the "Notes" tab, to see your notes rendered.
+
+Your notes will be stored in the same way as your checkmarks, according to the
+options you have activated under the Study menu (see above).
+
+
+### Study Pages
+
+As you accumulate notes and checkmarks, you may wish to see a summary of what
+you've recorded so far.
+For that, right-click on the _node_ (not the goal box)
+for which you just recorded some notes, and select the option to
+"Open study page."
+
+In a moment you should see an automatically generated page including all the
+goals for the theorem (not the proof), including the notes you just wrote.
+Similarly, you can open the study page for the _proof_ by right-clicking any
+of its nodes, and again choosing "Open study page". There you will see reflected
+the checkmarks you recorded earlier.
+
+If you right-click the tab for the study page, and select
+"Move to Opposite Group," you'll be able to see both the study page and the
+proof chart at the same time. If you try checking/unchecking some of the goal
+boxes in the study page, you'll see that they are linked to the corresponding
+boxes in the diagram. You may also notice that each goal listed in the study
+page is clickable, and will navigate you through a copy of the proof diagram.
+
+It should now be clear how, as you accumulate
+notes and checkmarks, these study pages can provide you with a nice report of
+what you've thought about so far, and what progress you've made in studying
+proofs.
+
+When you're done checking out your study pages, close them, come back to the
+chart tab, and we'll resume with our study of the proof.
+
+
+
+## Back to the proof! Next Goal: $e' = e$
+
+Okay, we took another detour to learn about features of the Proofscape ISE, but
+now it's time to get back to the proof.
+If you opened new tabs (or even new windows) in the last couple of sections,
+please close them now, and come back to just these notes and the original
+chart panel. (If you lost the original chart panel, don't worry: when you click
+the next widget, you'll be back in business.)
+
+En route to
+<chart:w44>[the conclusion of the theorem]{
+    on_board: Thm119.Pf,
+    view: Thm119.Thm.A
+},
+we said we had three sub-goals to prove
+regarding the way the rational prime $p$ factors in the cyclotomic field $k$, and we
+established
+<chart:w45>[the first of these]{view: Thm119.Pf.A190}, i.e. that the factorization
+is squarefree.
+
+With this knowledge in hand, we write the factorization of $p$
+into prime ideals like <chart:w49>[this]{
+  view: Thm119.Pf.I200,
+  select: null,
+  color: {":olB": Thm119.Pf.I200}
+}, introducing $e'$ as the number of distinct ideals.
+Our <chart:w54>[goal]{view: Thm119.Pf.A240} now is to show that this is equal to
+the $e$ that we defined in the theorem statment.
+
+Remember that the selected node is highlighted in blue, while its logical antecedents
+are purple, and its consequents green.
+
+Also remember that you now know several ways
+to review the node where $e$ was defined if it is currently off-screen.
+Hint: use the overview or neighborhood panels! Also remember that you can move
+the inset panel to any of the four corners if it is in the way: use the Chart menu,
+or right-click the panel itself.
+
+By the way, as we proceed I encourage you to continue checking the goal boxes
+in the upper-right corners of the nodes. (If you missed this, go back and read the
+previous section.) For a node that merely introduces new symbols, like
+<chart:w59>[this one]{
+  view: Thm119.Pf.I200,
+  select: null,
+  color: {":olB": Thm119.Pf.I200}
+}, it makes sense to check the box as soon
+as you've read and understood what the node says. This one, then, can be checked
+right now.
+
+For a node that draws a conclusion, like
+<chart:w60>[our current goal]{view: Thm119.Pf.A240}, it makes sense to wait until
+you've reached the point in the argument where you see that this conclusion does
+indeed follow. This time the checkmark means, "I am convinced that this step is
+valid." For now, this one will have to wait.
+
+
+## ...to be continued.
+
+UNDER CONSTRUCTION
+
+@@@

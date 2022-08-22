@@ -1,0 +1,240 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Doc Modules                                                      #
+# Copyright (c) 2018-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+from gh.toepproj.lit.H.ilbert.ZB import Thm117, Thm90
+
+from gh.toepproj.ex.G.auss.DA.Sec7 import Art343
+from gh.toepproj.ex.H.ilbert.ZB.Thm90 import X2 as Thm90_X2
+
+
+anno examplorers @@@
+
+# Example Explorers
+
+An _example explorer_ (or "examplorer") is a set of widgets in a Proofscape
+annotation, designed to help the user rapidly explore numerical examples of
+mathematical ideas and objects.
+
+Even examplorers themselves are best explained by example, so let's take
+a look at a few.
+
+## Scenario 1
+
+Suppose you're learning the theory of cyclotomic fields, and you've decided to
+go back to the subject's roots, by studying Section VII of Gauss's
+_Disquisitiones Arithmeticae_. You come to Article 343, where Gauss introduces
+the _periods_.
+
+It's not important for this discussion if you know exactly what periods are, but,
+roughly, when we're in the $n$th cyclotomic field, $n$ an odd prime, we need
+to pick a primitive residue $g$ mod $n$ (a number whose powers generate all the
+nonzero residues mod $n$) in order to form the periods.
+
+In Article 343, Gauss proves that the choice of generator $g$ (there are always
+multiple candidates) is not important; you get the same periods.
+And at the end of the article, Gauss offers us one example of what
+the periods look like, when $n = 19$ and $g = 2$.
+
+After studying the article, you might think to yourself, "Okay, I see the basic idea,
+but still, I'd like to get a better feel for these things by exploring more examples."
+
+### Loading an explorer
+
+With the goal in mind of studying more exmaples, let's say you go into PISE and
+open up the `gh.toepproj.ex` repo.
+There you look under `Gauss`,
+`DA`, and find `Art343`. It seems someone has already coded an example explorer
+for this article. Great! (If they hadn't, you would be welcome to code one
+yourself, and contribute it to the repo.)
+
+<link:w1>[Loading the explorer]{
+    ref: Art343.eg1,
+    tab: "other",
+} (please click the link if you haven't already!), you see that the default
+values of $n = 19$ and $g = 2$ have been set as in Gauss's article.
+You might now scroll through the explorer, where you see that there are
+five _parameters_ (yellow boxes), $n$, $g$, $G$, $e$, and $@lam$, and that a
+single _display_ (blue box) comes at the end.
+
+You can immediately begin exploring different examples, by choosing different
+values for the parameters. For example, you might change $e$ from $3$ to $6$,
+and watch the display update as expected.
+
+Looking more closely, you see that the specific purpose of this examplorer is
+to flesh out Gauss's proof that the periods are independent of the choice of
+generator. In Gauss's proof, he used capital $G$ as a supposed second generator,
+so the examplorer follows suit and now lets you dial in example values for $G$.
+In the display below, you're able to confirm that indeed you get the same
+periods, whether using $g$ or $G$ as generator. They may appear in a different
+order, and the terms within each period too may be in a different order, but
+you realize that this is all just part of the beauty of what's going on
+underneath the theorem.
+
+### Comparing side by side
+
+However, as you try different values for $G$, you might find it's hard to keep
+track of what changed in the display. No problem.
+Right-click the tab at the top of the examplorer
+window, and find "Open in Opposite Group." When you click that, you're going to
+cover up these notes, but you can find them again by selecting their tab.
+
+Now that you have two copies of the example explorer side by side, you can again
+try changing a single parameter (say, $G$), and then compare the displays,
+to see what difference the parameter made.
+
+
+## Scenario 2
+
+Let's say you're still studying cyclotomic fields, but this time you want to
+see how they were being treated by century's end, this time in Hilbert's
+*Zahlbericht*. You've come to
+Theorem 117, which establishes the factorization of odd prime $ell@$ in the
+$ell eth@$ cyclotomic field $k$, and are <chart:w2>[studying the proof]{
+    "view": Thm117.Pf,
+}. (Please click the link!)
+
+When you reach <chart:w3>[this step]{
+    "view": Thm117.Pf.A8,
+} (after you click, the step is highlighted in blue), you might think,
+"Well, the idea being used in this step of the proof is quite clever.
+I'd like to hash this out in
+a few numerical cases. I wonder if anyone's written an explorer."
+
+This time, you can right-click the node (the box highlighted in blue, where
+the step occurs) to open its context menu. At the bottom of the context menu
+you see that indeed there's an item that says "Notes:" (and then a library path),
+indicating that someone has written something about this node. Go ahead and
+click the "Notes:" item now.
+
+Sure enough, you find a discussion about the clever substitution
+$zeta mapsto zeta^{g g'}@$ that happens on this node, along with an example
+explorer of two parameters and one display. You can dial in a few different
+parameter values, and watch the display update. It's probably just confirming what
+you already saw in your head when you came to this step of the proof, but
+nevertheless it's nice to see it spelled out before your eyes, with some
+actual numbers in it. When you're satisfied, you can close the explorer, and
+return to the proof.
+
+
+## Conclusions
+
+This has been a brief introduction to *example explorers* in Proofscape.
+Hopefully now you see what they are, what purpose they serve, and how they
+can be linked to steps in proofs.
+
+In the "Syntax" chapter of these docs (coming soon!), you can learn about how
+to code example explorers in your own annotations.
+Or you can start right now by
+<link:w4>[opening one of the examplorers back up]{
+    ref: Art343.eg1,
+    tab: "other",
+}, right-clicking one of the parameter or display widgets (yellow or blue boxes),
+and selecting "View source." If you like learning by example,
+you can probably go pretty far just by examining the syntax that defines this
+explorer.
+
+@@@
+
+
+anno expansions @@@
+
+# Expansions
+
+An _expansion_ in Proofscape is a way of "splicing in" some extra steps, to
+help explain how an inference follows.
+
+## Scenario
+
+Let's take an example, suppose you had heard a lot about "Hilbert 90," and you
+wanted to see what Hilbert's original proof of this theorem looked like. You
+could begin by locating the theorem in the Toeplitz Project literature library,
+and <chart:w1>[opening it]{view: Thm90.Thm,}. (Please click the links as you
+read!)
+
+First, you can right-click anywhere in the gray background of the "Theorem 90"
+box, and select "Running defs" from the context menu, in order to review what
+are all the current "running definitions" in force at this point in the book.
+Reviewing these, and the theorem statement itself, you say to yourself, "Okay, we're
+supposing we have some element $A$ of a cyclic extension field $K$, which has
+norm of unity, down to the base field $k$. Under these conditions, we're told
+that $A$ must have a certain form; namely, there has to be some algebraic
+integer $B$ in the extension field, such that $A$ is equal to the quotient of
+this number $B$ divided by its own image under a generating automorphism $S$.
+Okay then, <chart:w2>[let's see the proof]{view:Thm90.Pf}.
+
+After panning around the diagram a bit, and getting a sense for the overall
+structure of the proof, you decide to <chart:w3>[zoom in]{
+    view: ["Thm90.Pf.{A06,A12,I02,I01,I00}", "Thm90.Thm.P"],
+    select: null,
+} and begin examining the first steps closely. You might think to yourself,
+"I can see that there are some clever constructions being introduced
+<chart:w4>[here]{select: "Thm90.Pf.{I02,I01,I00}"}, but I'm not even going to
+look at those yet. I can see that they lead -- by a *flow arrow* (dotted arrow) -- to
+<chart:w5>[the first *assertion*]{select: "Thm90.Pf.A06"} of the proof. That
+dotted arrow just means 'go here next,' so the first assertion really only
+draws *logically* on <chart:w6>[the theorem's premise]{select: Thm90.Thm.P}.
+(It's connected by a *solid* arrow.) So let's just start with that first
+assertion."
+
+Continuing, you realize the first assertion is really just unpacking the
+definition of the *norm* function $N_{K|k}$. And so you move on to
+<chart:w7>[the next step]{select: Thm90.Pf.A12}. "Okay," you think, "now it's
+getting interesting. I'm being told that this number $A_x$ that was constructed
+<chart:w8>[up here]{select: Thm90.Pf.I01} actually enjoys the same property as
+$A$ itself. Hmm... Why should that be?"
+
+There can be no doubt about it: it's clearly time now to break out pencil and paper
+and try your hand at this. You have the definition of $A_x$, you have an equation
+it's supposed to satisfy. Time to do some algebra. Math teachers everywhere take
+note: I'm not telling the student to jump to the answers at the back of the book.
+I'm telling the student to try their best and work it out for themselves. But
+_afterward_, or, in case you just can't get it and you're running out of time,
+it's nice to "flip to the back of the book" and see, or confirm, the answer.
+
+So let's say you work it out for yourself, but you want to see if anyone has
+filled in these steps yet, in the form of a Proofscape *expansion*.
+"If they haven't," you think, "maybe I'll write one, for others' benefit."
+
+Right-clicking on
+<chart:w9>[the node you've been working on]{view: Thm90.Pf.A12} (please go ahead
+and actually right-click on the node now!), you see that
+indeed there's an expansion listed at the bottom of the context menu. Go ahead
+and click to open the expansion now.
+
+The existing proof expands to make room for what is at least *one way* of filling
+in the missing steps, between <chart:w10>[these two steps]{view: "Thm90.Pf.{A06,A12}"}
+of the proof, as Hilbert wrote it. In particular, the expansion shows exactly
+where we <chart:w11>[use the proof's previous step]{select: Thm90_X2.R04.A09},
+and it shows that the proof's next step follows from
+<chart:w12>[this whole chain of equations]{select: Thm90_X2.R04}.
+
+If we had been struggling to fill in these steps ourselves, we might now look
+into the expansion and see <chart:w13>[here]{view: Thm90_X2.A01} that it all depends
+on the key observation that the automorphism $S$ fixes the base field $k$.
+"Of course!" we might then think, "I forgot to use one of the key properties that
+defines what $S$ actually is here."
+
+When we're done looking at the expansion, we can <chart:w14>[close it]{
+    off_board: Thm90_X2,
+    view: "Thm90.Pf.{A06,A12,A14,A22}",
+}, and resume with our study of Hilbert's proof.
+
+## Conclusions
+
+This has been a brief introduction to *expansions* in Proofscape.
+Hopefully now you see what they are, what purpose they serve, and how they
+can be linked to steps in proofs.
+
+In the "Syntax" chapter of these docs (coming soon!), you can learn about how
+to code expansions yourself. Or you can start right now by
+<chart:w15>[opening the expansion back up]{view: Thm90_X2}, right-clicking its
+background area, and selecting "View source." If you like learning by example,
+you can probably go pretty far just by examining the syntax that defines the
+expansion.
+@@@
