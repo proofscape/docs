@@ -1,7 +1,7 @@
 # Proofscape Doc Modules
 
-In some cases, documentation on the Proofscape language, and on the PISE
-(Proofscape Integrated Study Environment) software, is best written in
+In some cases, documentation on the Proofscape language, and on PISE
+(Proofscape Integrated Study Environment), is best written in
 Proofscape modules, and viewed within PISE itself. This repo is a place to
 write such "doc modules".
 
