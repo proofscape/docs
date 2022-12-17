@@ -1,5 +1,7 @@
 name: test
 on:
+  push:
+  pull_request:
   workflow_dispatch:
     inputs:
       content-vers:
@@ -13,4 +15,4 @@ jobs:
       - name: Build
         uses: proofscape/pfsc-repo-build-action@v1
         with:
-          content-vers: ${{inputs.content-vers}}
+          content-vers: ${{inputs.content-vers || 'WIP' }}
