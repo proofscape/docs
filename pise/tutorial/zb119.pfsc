@@ -14,8 +14,8 @@ anno tutorial @@@
 # Intro to PISE
 
 <ctl:w58>[]{
-  section_numbers: {
-    top_level: 2,
+  sectionNumbers: {
+    topLevel: 2,
   }
 }
 
@@ -190,7 +190,7 @@ diagrammatic representation should make themselves clear.
 It's been a while, so we might want to refresh ourselves on what we're
 here to prove. Let's therefore close the proof and review the theorem statement.
 To do that, you can either
-<chart:w47>[click here]{off_board: Thm119.Pf, view: Thm119.Thm},
+<chart:w47>[click here]{offBoard: Thm119.Pf, view: Thm119.Thm},
 or else close the proof yourself by right-clicking
 anywhere in its grey background, and selecting "Close" from the context menu.
 
@@ -479,7 +479,7 @@ the next widget, you'll be back in business.)
 
 En route to
 <chart:w44>[the conclusion of the theorem]{
-    on_board: Thm119.Pf,
+    onBoard: Thm119.Pf,
     view: Thm119.Thm.A
 },
 we said we had three sub-goals to prove

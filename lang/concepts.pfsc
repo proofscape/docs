@@ -221,7 +221,7 @@ on the key observation that the automorphism $S$ fixes the base field $k$.
 defines what $S$ actually is here."
 
 When we're done looking at the expansion, we can <chart:w14>[close it]{
-    off_board: Thm90_X2,
+    offBoard: Thm90_X2,
     view: "Thm90.Pf.{A06,A12,A14,A22}",
 }, and resume with our study of Hilbert's proof.
 
