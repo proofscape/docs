@@ -33,3 +33,11 @@ There you'll also find a light mode / dark mode setting.
     part03_opening_proof
     part04_overview_panel
     part05_outward_structure
+    part06_refresher
+    part07_plan
+    part08_delve_in
+    part09_nbhd_and_overview
+    part10_simul_views
+    part11_keeping_track
+    part12_back_to_proof
+    part13_UC
