@@ -31,3 +31,5 @@ There you'll also find a light mode / dark mode setting.
     part01_opening_thm
     part02_how_work
     part03_opening_proof
+    part04_overview_panel
+    part05_outward_structure
