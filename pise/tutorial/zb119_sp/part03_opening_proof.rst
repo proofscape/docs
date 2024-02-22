@@ -18,10 +18,10 @@ Opening the Proof
 =================
 
 Now we can open the proof. You can always do this by finding
-:pfsc-chart:`w24: a node that needs proof <Thm119.Thm.A>` -- in this case the node
+:pfsc-chart:`w24: a node that needs proof <"Thm119.Thm.A">` -- in this case the node
 that makes the assertion of the theorem -- then *right-click* this node, and look
 for an *Expansion*. You can try it yourself now, or I can
-:pfsc-chart:`w25: open the proof <Thm119.Pf>` for you.
+:pfsc-chart:`w25: open the proof <"Thm119.Pf">` for you.
 
 After the proof opens, you may find that the text on the nodes has become
 too small to read.
@@ -37,7 +37,7 @@ side of the diagram, and the conclusion to the opposite side.
 
 Let's locate the nodes of the theorem now.
 The premises are
-:pfsc-chart:`w26: here <Thm119.Thm.{I1,I2,I3}>`, and the
-conclusion is :pfsc-chart:`w27: here <Thm119.Thm.A>`.
+:pfsc-chart:`w26: here <"Thm119.Thm.{I1,I2,I3}">`, and the
+conclusion is :pfsc-chart:`w27: here <"Thm119.Thm.A">`.
 If you clicked the last two widgets you should have seen the diagram pan
 and zoom to display the nodes I'm talking about.

@@ -17,7 +17,7 @@
 Opening the Theorem
 ===================
 
-Let's begin by examining :pfsc-chart:`w23: the theorem <Thm119.Thm>`.
+Let's begin by examining :pfsc-chart:`w23: the theorem <"Thm119.Thm">`.
 (Please click the words "the theorem" if you haven't already!)
 You should now see a representation of Theorem 119 in a new panel
 beside these notes. We'll call that the "chart panel."
@@ -34,10 +34,10 @@ are examining. Hit :kbd:`Esc` or click in the background of the chart to
 take this menu away.
 
 As the diagram shows, we are
-:pfsc-chart:`w37: considering <Thm119.Thm.I1>`
+:pfsc-chart:`w37: considering <"Thm119.Thm.I1">`
 (please keep clicking the links
 as you read!) a rational prime $p$ different from $@ell$, and we
 want to establish
-:pfsc-chart:`w38: the way this prime factors <Thm119.Thm.A>`
+:pfsc-chart:`w38: the way this prime factors <"Thm119.Thm.A">`
 in the field $k$. Please take
 a moment and review the full theorem statement as presented in the diagram.
