@@ -12,6 +12,8 @@
 
     import gh.toepproj.lit.H.ilbert.ZB.Thm119 as Thm119
 
+.. pfsc-ctl::
+    :default_chart_group: ".."
 
 =================
 Opening the Proof
