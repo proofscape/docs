@@ -34,8 +34,8 @@ produce, as you are now doing.
 If you were working on modules you owned, then instead of "View Source," you would
 see "Edit Source."
 
-You can learn to code Proofscape modules from `the docs`_. For now, close any source
+You can `learn to code Proofscape modules`_ from the docs. For now, close any source
 modules you may have opened, and we'll get back to studying Theorem 119.
 
 
-.. _the docs: https://docs.proofscape.org
+.. _learn to code Proofscape modules: https://docs.proofscape.org/tutorials/authors/index.html
