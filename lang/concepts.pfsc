@@ -21,8 +21,6 @@ An _example explorer_ (or "examplorer") is a set of widgets in a Proofscape
 annotation, designed to help the user rapidly explore numerical examples of
 mathematical ideas and objects.
 
-Even examplorers themselves are best explained by example, so let's take
-a look at a few.
 
 ## Scenario 1
 
@@ -32,17 +30,18 @@ _Disquisitiones Arithmeticae_. You come to Article 343, where Gauss introduces
 the _periods_.
 
 It's not important for this discussion if you know exactly what periods are, but,
-roughly, when we're in the $n$th cyclotomic field, $n$ an odd prime, we need
+when we're in the $n$th cyclotomic field, $n$ an odd prime, we need
 to pick a primitive residue $g$ mod $n$ (a number whose powers generate all the
 nonzero residues mod $n$) in order to form the periods.
 
 In Article 343, Gauss proves that the choice of generator $g$ (there are always
-multiple candidates) is not important; you get the same periods.
-And at the end of the article, Gauss offers us one example of what
+multiple candidates) is not important; you get the same periods whichever generator
+you choose. And at the end of the article, Gauss offers us one example of what
 the periods look like, when $n = 19$ and $g = 2$.
 
 After studying the article, you might think to yourself, "Okay, I see the basic idea,
-but still, I'd like to get a better feel for these things by exploring more examples."
+but still, I'd like to get a better feel for what the periods look like, by
+exploring more examples."
 
 ### Loading an explorer
 
@@ -73,12 +72,12 @@ so the examplorer follows suit and now lets you dial in example values for $G$.
 In the display below, you're able to confirm that indeed you get the same
 periods, whether using $g$ or $G$ as generator. They may appear in a different
 order, and the terms within each period too may be in a different order, but
-you realize that this is all just part of the beauty of what's going on
+you realize that this is all just a part of the beauty of what's going on
 underneath the theorem.
 
 ### Comparing side by side
 
-However, as you try different values for $G$, you might find it's hard to keep
+However, as you try different values for $G$, you might find that it's hard to keep
 track of what changed in the display. No problem.
 Right-click the tab at the top of the examplorer
 window, and find "Open in Opposite Group." When you click that, you're going to
@@ -86,7 +85,7 @@ cover up these notes, but you can find them again by selecting their tab.
 
 Now that you have two copies of the example explorer side by side, you can again
 try changing a single parameter (say, $G$), and then compare the displays,
-to see what difference the parameter made.
+to see what difference was made by the change of parameter value.
 
 
 ## Scenario 2
@@ -122,22 +121,27 @@ actual numbers in it. When you're satisfied, you can close the explorer, and
 return to the proof.
 
 
-## Conclusions
+## How to build example explorers
 
-This has been a brief introduction to *example explorers* in Proofscape.
-Hopefully now you see what they are, what purpose they serve, and how they
-can be linked to steps in proofs.
+In the Proofscape
+[reference docs](https://docs.proofscape.org/ref/widgets/examp/index.html)
+you can learn all the rules for defining example explorer widgets, and there is
+also a page about them in
+[the Authors' Tutorial](https://docs.proofscape.org/tutorials/authors/add/part06.html).
 
-In the "Syntax" chapter of these docs (coming soon!), you can learn about how
-to code example explorers in your own annotations.
-Or you can start right now by
+You can even start to learn by example right now, by
 <link:w4>[opening one of the examplorers back up]{
     ref: Art343.eg1,
     tab: "other",
 }, right-clicking one of the parameter or display widgets (yellow or blue boxes),
-and selecting "View source." If you like learning by example,
-you can probably go pretty far just by examining the syntax that defines this
-explorer.
+and selecting "View source."
+
+
+## Conclusion
+
+This has been a brief introduction to *example explorers* in Proofscape.
+Hopefully now you see what they are, what purpose they serve, and how they
+can be linked to steps in proofs.
 
 @@@
 
@@ -146,21 +150,22 @@ anno expansions @@@
 
 # Expansions
 
-An _expansion_ in Proofscape is a way of "splicing in" some extra steps, to
-help explain how an inference follows.
+An _expansion_ in Proofscape is a way of "splicing" some extra steps into a
+proof, in order to help explain how an inference follows.
 
 ## Scenario
 
 Let's take an example, suppose you had heard a lot about "Hilbert 90," and you
 wanted to see what Hilbert's original proof of this theorem looked like. You
-could begin by locating the theorem in the Toeplitz Project literature library,
+could begin by locating the theorem in the
+[Toeplitz Project Literature Library](https://toeplitzproject.org/repos/index.html#the-literature-library),
 and <chart:w1>[opening it]{view: Thm90.Thm,}. (Please click the links as you
 read!)
 
 First, you can right-click anywhere in the gray background of the "Theorem 90"
 box, and select "Running defs" from the context menu, in order to review what
 are all the current "running definitions" in force at this point in the book.
-Reviewing these, and the theorem statement itself, you say to yourself, "Okay, we're
+Reviewing these, and the theorem statement itself, you might say to yourself, "Okay, we're
 supposing we have some element $A$ of a cyclic extension field $K$, which has
 norm of unity, down to the base field $k$. Under these conditions, we're told
 that $A$ must have a certain form; namely, there has to be some algebraic
@@ -184,38 +189,34 @@ assertion."
 
 Continuing, you realize the first assertion is really just unpacking the
 definition of the *norm* function $N_{K|k}$. And so you move on to
-<chart:w7>[the next step]{select: Thm90.Pf.A12}. "Okay," you think, "now it's
+<chart:w7>[the next step]{select: Thm90.Pf.A12}. "Okay," you might think, "now it's
 getting interesting. I'm being told that this number $A_x$ that was constructed
 <chart:w8>[up here]{select: Thm90.Pf.I01} actually enjoys the same property as
 $A$ itself. Hmm... Why should that be?"
 
-There can be no doubt about it: it's clearly time now to break out pencil and paper
-and try your hand at this. You have the definition of $A_x$, you have an equation
-it's supposed to satisfy. Time to do some algebra. Math teachers everywhere take
-note: I'm not telling the student to jump to the answers at the back of the book.
-I'm telling the student to try their best and work it out for themselves. But
-_afterward_, or, in case you just can't get it and you're running out of time,
-it's nice to "flip to the back of the book" and see, or confirm, the answer.
-
-So let's say you work it out for yourself, but you want to see if anyone has
-filled in these steps yet, in the form of a Proofscape *expansion*.
-"If they haven't," you think, "maybe I'll write one, for others' benefit."
+Unless you happen to immediately see why $A_x$ satisfies this equation, it would
+be a good time now to break out pencil and paper and attempt to work it out.
+If you become stuck, you may want to seek out additional explanation. Or, even if
+you succeed in working it out for yourself, you might like to see whether others
+confirmed it the same way you did.
 
 Right-clicking on
 <chart:w9>[the node you've been working on]{view: Thm90.Pf.A12} (please go ahead
-and actually right-click on the node now!), you see that
-indeed there's an expansion listed at the bottom of the context menu. Go ahead
+and actually right-click the node now!), you see that
+there's an expansion listed at the bottom of the context menu. Go ahead
 and click to open the expansion now.
 
 The existing proof expands to make room for what is at least *one way* of filling
-in the missing steps, between <chart:w10>[these two steps]{view: "Thm90.Pf.{A06,A12}"}
+in the missing steps, between
+<chart:w10>[these two steps]{view: "Thm90.Pf.{A06,A12}", onBoard: "Thm90_X2"}
 of the proof, as Hilbert wrote it. In particular, the expansion shows exactly
-where we <chart:w11>[use the proof's previous step]{select: Thm90_X2.R04.A09},
+where we
+<chart:w11>[use the proof's previous step]{onBoard: "Thm90_X2", select: Thm90_X2.R04.A09},
 and it shows that the proof's next step follows from
-<chart:w12>[this whole chain of equations]{select: Thm90_X2.R04}.
+<chart:w12>[this whole chain of equations]{onBoard: "Thm90_X2", select: Thm90_X2.R04}.
 
 If we had been struggling to fill in these steps ourselves, we might now look
-into the expansion and see <chart:w13>[here]{view: Thm90_X2.A01} that it all depends
+into the expansion and see <chart:w13>[here]{onBoard: "Thm90_X2", view: Thm90_X2.A01} that it all depends
 on the key observation that the automorphism $S$ fixes the base field $k$.
 "Of course!" we might then think, "I forgot to use one of the key properties that
 defines what $S$ actually is here."
@@ -225,16 +226,19 @@ When we're done looking at the expansion, we can <chart:w14>[close it]{
     view: "Thm90.Pf.{A06,A12,A14,A22}",
 }, and resume with our study of Hilbert's proof.
 
-## Conclusions
+
+## How to write expansions
+
+You can read about expansions in the Proofscape
+[reference docs](https://docs.proofscape.org/ref/deducs/deducs.html#expansions),
+or you can even start to learn by example right now, by
+<chart:w15>[opening the expansion back up]{view: Thm90_X2}, right-clicking its
+background area, and selecting "View source."
+
+
+## Conclusion
 
 This has been a brief introduction to *expansions* in Proofscape.
 Hopefully now you see what they are, what purpose they serve, and how they
 can be linked to steps in proofs.
-
-In the "Syntax" chapter of these docs (coming soon!), you can learn about how
-to code expansions yourself. Or you can start right now by
-<chart:w15>[opening the expansion back up]{view: Thm90_X2}, right-clicking its
-background area, and selecting "View source." If you like learning by example,
-you can probably go pretty far just by examining the syntax that defines the
-expansion.
 @@@
