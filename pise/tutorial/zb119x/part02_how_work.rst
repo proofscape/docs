@@ -38,4 +38,4 @@ You can `learn to code Proofscape modules`_ from the docs. For now, close any so
 modules you may have opened, and we'll get back to studying Theorem 119.
 
 
-.. _learn to code Proofscape modules: https://docs.proofscape.org/tutorials/authors/index.html
+.. _learn to code Proofscape modules: https://docs.proofscape.org/en/stable/tutorials/authors/index.html

@@ -63,7 +63,7 @@ your checkmarks in JSON format, and then import them again later.
     you have to log in first, and then opt-in by checking the box in the Study menu.
 
 
-.. _running PISE on your own computer: https://docs.proofscape.org/pise/basic.html
+.. _running PISE on your own computer: https://docs.proofscape.org/en/stable/pise/basic.html
 
 
 Jotting Down Notes

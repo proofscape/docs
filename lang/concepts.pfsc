@@ -124,10 +124,10 @@ return to the proof.
 ## How to build example explorers
 
 In the Proofscape
-[reference docs](https://docs.proofscape.org/ref/widgets/examp/index.html)
+[reference docs](https://docs.proofscape.org/en/stable/ref/widgets/examp/index.html)
 you can learn all the rules for defining example explorer widgets, and there is
 also a page about them in
-[the Authors' Tutorial](https://docs.proofscape.org/tutorials/authors/add/part06.html).
+[the Authors' Tutorial](https://docs.proofscape.org/en/stable/tutorials/authors/add/part06.html).
 
 You can even start to learn by example right now, by
 <link:w4>[opening one of the examplorers back up]{
@@ -230,7 +230,7 @@ When we're done looking at the expansion, we can <chart:w14>[close it]{
 ## How to write expansions
 
 You can read about expansions in the Proofscape
-[reference docs](https://docs.proofscape.org/ref/deducs/deducs.html#expansions),
+[reference docs](https://docs.proofscape.org/en/stable/ref/deducs/deducs.html#expansions),
 or you can even start to learn by example right now, by
 <chart:w15>[opening the expansion back up]{view: Thm90_X2}, right-clicking its
 background area, and selecting "View source."
