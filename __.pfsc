@@ -7,9 +7,9 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
 # --------------------------------------------------------------------------- #
 
-version = "v0.3.1"
+version = "v0.4.0"
 
 deps = {
     "gh.toepproj.lit": "v0.23.1",
-    "gh.toepproj.ex": "v0.23.1",
+    "gh.toepproj.ex": "v0.24.0",
 }
