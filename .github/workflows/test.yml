@@ -10,9 +10,10 @@ on:
         default: "WIP"
 jobs:
   build-test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Build
-        uses: proofscape/pfsc-repo-build-action@v2
+        uses: proofscape/pfsc-repo-build-action@v3
         with:
+          pise-vers: 0.30.1
           content-vers: ${{inputs.content-vers || 'WIP' }}

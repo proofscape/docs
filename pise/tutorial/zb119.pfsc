@@ -1,6 +1,5 @@
 # --------------------------------------------------------------------------- #
-# Proofscape Doc Modules                                                      #
-# Copyright (c) 2018-2022 Proofscape contributors                             #
+# Copyright (c) 2018-2024 Proofscape Contributors                             #
 #                                                                             #
 # This Source Code Form is subject to the terms of the Mozilla Public         #
 # License, v. 2.0. If a copy of the MPL was not distributed with this         #
@@ -14,8 +13,8 @@ anno tutorial @@@
 # Intro to PISE
 
 <ctl:w58>[]{
-  section_numbers: {
-    top_level: 2,
+  sectionNumbers: {
+    topLevel: 2,
   }
 }
 
@@ -143,26 +142,26 @@ chart area to make all nodes visible.)
 From here we can spy what _may_ turn out to be meaningful structures within the
 proof. (At this point, these are just guesses.)
 
-On one side of the diagram there appears to be <chart:w40>[a small cluster]{color: {
-  ":olB:bgB": "Thm119.Pf.{A190,Thm31,A180,Thm118}"
-}} of nodes.
+On one side of the diagram there appears to be <chart:w40>[a small cluster]{color: "
+  olB,bgB: Thm119.Pf.{A190,Thm31,A180,Thm118}
+"} of nodes.
 
 Looking more closely, we might observe that certain nodes form
-<chart:w41>[a kind of loop]{color: {
-  ":olB:bgB:eoB": "Thm119.Pf.{I80,R90,A100,A110,A120,A140,A150,A160}"
-}}, into which <chart:w42>[these nodes]{color: {
-  ":olB:bgB:eoB": "Thm119.Pf.{I60,Thm24,A95,Thm26,A70,A50,A40,I30,S20,I10,S130}"
-}} seem to feed.
+<chart:w41>[a kind of loop]{color: "
+  olB,bgB,eoB: Thm119.Pf.{I80,R90,A100,A110,A120,A140,A150,A160}
+"}, into which <chart:w42>[these nodes]{color: "
+  olB,bgB,eoB: Thm119.Pf.{I60,Thm24,A95,Thm26,A70,A50,A40,I30,S20,I10,S130}
+"} seem to feed.
 
 Selecting <chart:w43>[the three premises]{
-  color: {":olB:bgB:eoBG": "Thm119.Thm.{I1,I2,I3}"}
+  color: "olB,bgB,eoBG: Thm119.Thm.{I1,I2,I3}"
 } and tracing their outgoing connections, we see where they feed into the picture.
 (You can also try clicking on them one at a time, to highlight them individually.)
-Selecting <chart:w46>[the conclusion]{color: {
-  ":olB:bgB:eiVB": Thm119.Thm.A,
-}}, we see that it drops out of <chart:w1>[another small cluster]{color: {
-  ":olB:bgB": "Thm119.Pf.{A240,A230,A220,A170,I200,A210}"
-}}, which itself draws together the "loop" and the first small cluster we identified
+Selecting <chart:w46>[the conclusion]{color: "
+  olB,bgB,eiVB: Thm119.Thm.A,
+"}, we see that it drops out of <chart:w1>[another small cluster]{color: "
+  olB,bgB: Thm119.Pf.{A240,A230,A220,A170,I200,A210}
+"}, which itself draws together the "loop" and the first small cluster we identified
 earlier.
 
 
@@ -190,7 +189,7 @@ diagrammatic representation should make themselves clear.
 It's been a while, so we might want to refresh ourselves on what we're
 here to prove. Let's therefore close the proof and review the theorem statement.
 To do that, you can either
-<chart:w47>[click here]{off_board: Thm119.Pf, view: Thm119.Thm},
+<chart:w47>[click here]{offBoard: Thm119.Pf, view: Thm119.Thm},
 or else close the proof yourself by right-clicking
 anywhere in its grey background, and selecting "Close" from the context menu.
 
@@ -233,7 +232,7 @@ Okay, it's finally time to get down to the business of examining the argument,
 but I will continue to teach you how to use the software as we go.
 
 So... We want to show that $p$ factors in $@k = bbQ(zeta)$ like
-<chart:w52>[this]{view: Thm119.Thm.A, color:{":bgY":Thm119.Thm.A}, select: null}.
+<chart:w52>[this]{view: Thm119.Thm.A, color:"bgY: Thm119.Thm.A", select: null}.
 This includes the fact that...
 
 * the prime ideals $@frpi$ dividing $p$ are distinct,
@@ -246,9 +245,9 @@ If we had been studying the _Zahlbericht_ text up to this point, it would be
 fresh in our minds that a prime is unramified in a number
 field just in case it does not divide the discriminant of the field. And so
 it would be reasonable to begin this proof by bringing these facts to bear,
-and this is what happens right <chart:w53>[here]{color: {
-  ":bgY":"Thm119.Pf.{Thm118,A180,A190,Thm31}"
-}, view: "Thm119.Pf.{Thm118,A180,A190,Thm31}"}.
+and this is what happens right <chart:w53>[here]{color: "
+  bgY: Thm119.Pf.{Thm118,A180,A190,Thm31}
+", view: "Thm119.Pf.{Thm118,A180,A190,Thm31}"}.
 
 If you hover your mouse pointer over the nodes for Theorems 31 and 118, you
 will see pop-ups showing the theorem statements. The theorems can also be
@@ -413,7 +412,7 @@ you have to log in first, and then opt in by checking the box in the Study menu.
 ### Jotting Down Notes
 
 Goal boxes also give you a way to jot down notes. Find the goal box for the
-<chart:w56>[conclusion node]{view: Thm119.Thm.A, color:{":bgY":Thm119.Thm.A}}, and
+<chart:w56>[conclusion node]{view: Thm119.Thm.A, color:"bgY: Thm119.Thm.A"}, and
 right-click _the goal box (not the node)_.
 You should see a context menu.
 If you select the "Notes" option on this menu,
@@ -479,7 +478,7 @@ the next widget, you'll be back in business.)
 
 En route to
 <chart:w44>[the conclusion of the theorem]{
-    on_board: Thm119.Pf,
+    onBoard: Thm119.Pf,
     view: Thm119.Thm.A
 },
 we said we had three sub-goals to prove
@@ -492,7 +491,7 @@ With this knowledge in hand, we write the factorization of $p$
 into prime ideals like <chart:w49>[this]{
   view: Thm119.Pf.I200,
   select: null,
-  color: {":olB": Thm119.Pf.I200}
+  color: "olB: Thm119.Pf.I200"
 }, introducing $e'$ as the number of distinct ideals.
 Our <chart:w54>[goal]{view: Thm119.Pf.A240} now is to show that this is equal to
 the $e$ that we defined in the theorem statment.
@@ -512,7 +511,7 @@ previous section.) For a node that merely introduces new symbols, like
 <chart:w59>[this one]{
   view: Thm119.Pf.I200,
   select: null,
-  color: {":olB": Thm119.Pf.I200}
+  color: "olB: Thm119.Pf.I200"
 }, it makes sense to check the box as soon
 as you've read and understood what the node says. This one, then, can be checked
 right now.
