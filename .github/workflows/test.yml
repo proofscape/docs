@@ -15,5 +15,5 @@ jobs:
       - name: Build
         uses: proofscape/pfsc-repo-build-action@v3
         with:
-          pise-vers: 0.30.1
+          pise-vers: 0.30.3
           content-vers: ${{inputs.content-vers || 'WIP' }}
